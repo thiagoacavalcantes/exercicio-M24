@@ -1,0 +1,33 @@
+{
+  "name": "pactum-json-reporter",
+  "version": "1.0.2",
+  "description": "JSON reporter for pactum tests",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "files": [
+    "/src"
+  ],
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ASaiAnudeep/pactum-json-reporter.git"
+  },
+  "keywords": [
+    "pactum",
+    "pactumjs",
+    "json",
+    "reporter"
+  ],
+  "author": "Anudeep <asa.anudeep4@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ASaiAnudeep/pactum-json-reporter/issues"
+  },
+  "homepage": "https://github.com/ASaiAnudeep/pactum-json-reporter#readme",
+  "devDependencies": {
+    "mocha": "^8.4.0",
+    "pactum": "^3.0.15"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "exercicio-modulo-24",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test/**/*.test.js",
+    "test:gql": "mocha ./test/graphql/*.test.js",
+    "test:rest": "mocha ./test/api/*.test.js",
+    "test:contractProvider": "mocha ./test/contract/addCategoryProvider.test.js",
+    "test:contractConsumer": "mocha ./test/contract/addCategoryConsumer.test.js"
+  },
+  "keywords": [],
+  "author": "thiagoacavalcante",
+  "license": "ISC",
+  "description": "Testes de API",
+  "devDependencies": {
+    "mocha": "^11.1.0",
+    "pactum": "^3.7.6",
+    "pactum-json-reporter": "^1.0.2"
+  },
+  "dependencies": {
+    "pactum-flow-plugin": "^0.1.4",
+    "pactum-matchers": "^1.1.7"
+  }
+}
