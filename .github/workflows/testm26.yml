@@ -1,0 +1,29 @@
+name: GraphQL API Tests
+
+on:
+  push:
+    branches:
+      - m26
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Instalar dependências
+        run: npm ci  # Usa npm ci para instalação limpa e consistente
+
+      - name: Corrigir permissões do Mocha
+        run: chmod +x node_modules/.bin/mocha
+
+      - name: Executar testes GraphQL com Pactum
+        run: npx mocha ./test/**/*.test.js
