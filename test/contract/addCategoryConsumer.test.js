@@ -1,5 +1,10 @@
-const { reporter, flow, handler } = require('pactum');
-const pf = require('pactum-flow-plugin');
+const pactum = require('pactum');
+require('pactum-flow-plugin'); // Ativa o plugin se necessário
+
+const { reporter, flow, handler } = pactum;
+const request = pactum.request;
+
+
 
 function addFlowReporter() {
   pf.config.url = 'http://localhost:8080'; // pactum flow server url
