@@ -1,4 +1,5 @@
-name: GraphQL API Tests
+- name: Executar testes GraphQL com Pactum
+  run: npx mocha ./test/**/*.test.js
 
 on:
   push:
