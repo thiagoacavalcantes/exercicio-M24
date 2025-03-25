@@ -3,7 +3,7 @@ name: GraphQL API Tests
 on:
   push:
     branches:
-      - main
+      - m26
   pull_request:
 
 jobs:
