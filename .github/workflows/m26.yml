@@ -20,7 +20,10 @@ jobs:
           node-version: 18
 
       - name: Instalar dependências
-        run: npm install
+        run: npm ci  # Usa ci para instalar dependências de forma confiável
+
+      - name: Corrigir permissões do Mocha
+        run: chmod +x node_modules/.bin/mocha
 
       - name: Executar testes GraphQL com Pactum
         run: npx mocha ./test/**/*.test.js
